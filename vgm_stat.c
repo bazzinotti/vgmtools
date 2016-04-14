@@ -9,6 +9,13 @@
 #include <wchar.h>
 #include <zlib.h>
 
+// Define PATH_MAX
+#ifdef __APPLE__
+#include <limits.h>
+#elif __linux__
+#include <linux/limits.h>
+#endif
+
 #ifdef WIN32
 #include <windows.h>	// for Directory Listing
 #else
